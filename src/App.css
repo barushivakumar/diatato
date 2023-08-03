@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Rubik+Iso&family=Titillium+Web:wght@300&display=swap');
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Works for Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.app {
+  /* font-family: "Proxima Nova Lt"; */
+  background: #f1f4fb;
+  font-family: 'Kanit', sans-serif;
+font-family: 'Rubik Iso', cursive;
+font-family: 'Titillium Web', sans-serif;
+
+
+}
+
+.table thead th {
+  vertical-align: top;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  min-height: 98%;
+  height: 98%;
+  width: 4.2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: 0.3s width;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.boxicon-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+  position: relative;
+}
+.boxicon-container:hover{
+  color: white;
+}
+.boxicon {
+  margin: 0.8rem;
+  animation-iteration-count: 1;
+  z-index: 2;
+}
+
+.first-and-last-trash-fix {
+  margin: 0.8rem;
+}
+
+/* .active {
+  background-color: red;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  background-color: #373737;
+  color: white;
+  opacity: 1;
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -0.25rem;
+  border-radius: 20px;
+ 
+} */
+
+.boxicon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  background-color: #373737;
+  color: white;
+  opacity: 0;
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -0.25rem;
+  border-radius: 10px;
+  /* border-bottom-right-radius: 0.8rem; */
+}
+
+.boxicon-container:hover > .boxicon::after {
+  opacity: 1;
+  transition: 0.1s;
+  color:white;
+}
+
+.sidebar > *:first-child {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.final-icon {
+  background-color: red;
+}
+
+.description {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 4rem;
+  z-index: 10;
+  font-weight: bold;
+  margin: 0;
+  
+  transition: 0.2s opacity;
+  text-decoration: none;
+  
+}
+
+.sub-items{
+  
+}
+
+
+.active-description {
+  color: white;
+  text-decoration: none;
+}
+
+.expanded {
+  width: 300px;
+  align-items: flex-start;
+}
+
+.show-description {
+  
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+}
+
+.text {
+  color: white;
+  z-index: 100;
+  margin: 0 auto;
+  align-self: center;
+  font-size: 32px;
+}
+.componentContainer{
+  color:black;
+  
+  width:100%;
+  margin-left: 15px;
+  margin-right: 24px;
+  height:100%
+}
+.ComponentInnerContainer{
+  background:white;
+  border-radius:12px;
+  height:100%;
+  overflow: auto;
+}
+.buttonUI{
+  background-color: #34447d;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+
+.buttonUI :hover{
+  background-color: #34447d;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -25px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 25px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+  background: transparent;
+  margin-bottom: 20px;
+}
+
+.ActiveTabStyle{
+  background: #34447d;
+}
+.multiselectStyle{
+  border:2px solid gray;
+  border-radius:5px;
+  width:100%;
+  height:40px;
+}
+.file-input {
+  /* Background color for the input field */
+  background-color: #f2f2f2;
+  /* Other styling properties */
+  /* ... */
+}
+
+.file-input::placeholder {
+  /* Placeholder text color */
+  color: white;
+}
+
+.file-input::-webkit-file-upload-button {
+  /* Background color for the "Choose Files" button */
+  background-color: #34447d;
+  color:white;
+  /* Other styling properties */
+  /* ... */
+}
+
+.multiselectStyle2{
+  border:2px solid gray;
+  border-radius:5px;
+  width:100%;
+  height:40px;
+}
+
+.multiselectStyle3{
+  border:2px solid gray;
+  border-radius:5px;
+  width:200px;
+  height:40px;
+}
+.ant-upload-drag{
+  height: 30px;
+}
+.side-menu {
+  color: #34447d;
+  height: calc(100% - 25px);
+  border-radius:10px;
+  width: 350px;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  margin: 0px 0px 0px 20px;
+}
+
+.side-menu  ul{
+  list-style: none;
+  display: block;
+  padding: 10px;
+}
+
+.side-menu  ul a{
+  list-style: none;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+.activeClass{
+  font-weight: bold;
+  background-color: #34447d;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+.activeClass:hover{
+  color: white;
+}
+
+.activeImageClass{
+  fill: white;
+}
+.InactiveClass{
+  background-color: white;
+  color: #34447d;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.InactiveClass:hover{
+  color: #34447d;
+}
+  .InactiveImageClass{
+    fill: #34447d;
+  }
+  .AdminSidemenu ul li:first-child{
+    font-weight: bold;
+}  
+
+  .selectedSubMenu {
+    font-weight: 800;
+  }
+  .notSelectedSubmenu{
+    font-weight: normal;
+  }
+
+  
+@media screen and (max-height: 550px) {
+  .boxicon {
+    margin-left: 1.2rem;
+  }
+  .first-and-last-trash-fix {
+    margin-left: 1.2rem;
+  }
+}
+
+
+.pricing-items {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+.single-item {
+  padding: 0;
+}
+
+.pricing-item {
+  background: #ffffff;
+  position: relative;
+  z-index: 1;
+  box-shadow: 1px 4px 20px -2px rgba(0,0,0,0.1);
+  padding: 30px;
+  border: 2px solid #34447d;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.pricing-item ul {
+  display: inline-block;
+  text-align: left;
+  padding: 0px; 
+}
+
+.pricing-item li.pricing-header{
+  text-align: center;
+  justify-content: center;
+}
+
+
+.pricing-item li.price{
+  text-align: center;
+  justify-content: center;
+}
+
+
+
+.pricing-item li.icon {
+  text-align: center;
+  justify-content: center;
+}
+
+
+.pricing-item li {
+  margin-bottom: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.pricing-item li i {
+  margin-left: 30px;
+  color: #00a37b;
+}
+
+.pricing-item.active {
+  
+}
+
+.input-group button{
+  background-color: #34447d;
+  border:1px solid white;
+}
+
+.input-group button:hover{
+  background-color: #34447d;
+  border:1px solid white;
+}
+
+
+.input-group button:active{
+  background-color: #34447d;
+  border:1px solid white;
+}
+
+.btn-group  .btn-primary {
+  background-color: #34447d;
+  border:1px solid white;
+}
+.btn-group  .btn {
+  background-color: #34447d;
+  border:1px solid white;
+}
+
+.thead-th{
+  color: #34447d;
+}
